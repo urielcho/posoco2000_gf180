@@ -1,0 +1,140 @@
+library (posoco2000) {
+  comment                        : "";
+  delay_model                    : table_lookup;
+  simulation                     : false;
+  capacitive_load_unit (1,pF);
+  leakage_power_unit             : 1pW;
+  current_unit                   : "1A";
+  pulling_resistance_unit        : "1ohm";
+  time_unit                      : "1ns";
+  voltage_unit                   : "1v";
+  library_features(report_delay_calculation);
+
+  input_threshold_pct_rise : 50;
+  input_threshold_pct_fall : 50;
+  output_threshold_pct_rise : 50;
+  output_threshold_pct_fall : 50;
+  slew_lower_threshold_pct_rise : 30;
+  slew_lower_threshold_pct_fall : 30;
+  slew_upper_threshold_pct_rise : 70;
+  slew_upper_threshold_pct_fall : 70;
+  slew_derate_from_library : 1.0;
+
+
+  nom_process                    : 1.0;
+  nom_temperature                : 25.0;
+  nom_voltage                    : 5.00;
+
+  type ("segm") {
+    base_type : array;
+    data_type : bit;
+    bit_width : 8;
+    bit_from : 7;
+    bit_to : 0;
+  }
+  type ("sel") {
+    base_type : array;
+    data_type : bit;
+    bit_width : 10;
+    bit_from : 9;
+    bit_to : 0;
+  }
+
+  cell ("posoco2000") {
+    pin("clk") {
+      direction : input;
+      capacitance : 0.0296;
+    }
+    pin("vdd") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("vss") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    bus("segm") {
+      bus_type : segm;
+      direction : output;
+      capacitance : 0.0000;
+    pin("segm[7]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("segm[6]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("segm[5]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("segm[4]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("segm[3]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("segm[2]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("segm[1]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("segm[0]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    }
+    bus("sel") {
+      bus_type : sel;
+      direction : output;
+      capacitance : 0.0000;
+    pin("sel[9]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("sel[8]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("sel[7]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("sel[6]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("sel[5]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("sel[4]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("sel[3]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("sel[2]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("sel[1]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("sel[0]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    }
+  }
+
+}

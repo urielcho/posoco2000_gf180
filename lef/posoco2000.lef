@@ -1,0 +1,231 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO posoco2000
+  CLASS BLOCK ;
+  FOREIGN posoco2000 ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 300.000 BY 300.000 ;
+  PIN clk
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 296.000 13.440 299.000 14.000 ;
+    END
+  END clk
+  PIN segm[0]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 296.000 77.280 299.000 77.840 ;
+    END
+  END segm[0]
+  PIN segm[1]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 188.160 1.000 188.720 4.000 ;
+    END
+  END segm[1]
+  PIN segm[2]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 296.000 204.960 299.000 205.520 ;
+    END
+  END segm[2]
+  PIN segm[3]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 296.000 268.800 299.000 269.360 ;
+    END
+  END segm[3]
+  PIN segm[4]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 1.000 252.000 4.000 252.560 ;
+    END
+  END segm[4]
+  PIN segm[5]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 204.960 296.000 205.520 299.000 ;
+    END
+  END segm[5]
+  PIN segm[6]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 0.000 1.000 0.560 4.000 ;
+    END
+  END segm[6]
+  PIN segm[7]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 77.280 296.000 77.840 299.000 ;
+    END
+  END segm[7]
+  PIN sel[0]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 252.000 1.000 252.560 4.000 ;
+    END
+  END sel[0]
+  PIN sel[1]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 60.480 1.000 61.040 4.000 ;
+    END
+  END sel[1]
+  PIN sel[2]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 141.120 296.000 141.680 299.000 ;
+    END
+  END sel[2]
+  PIN sel[3]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 1.000 60.480 4.000 61.040 ;
+    END
+  END sel[3]
+  PIN sel[4]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 1.000 124.320 4.000 124.880 ;
+    END
+  END sel[4]
+  PIN sel[5]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 268.800 296.000 269.360 299.000 ;
+    END
+  END sel[5]
+  PIN sel[6]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 124.320 1.000 124.880 4.000 ;
+    END
+  END sel[6]
+  PIN sel[7]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 1.000 188.160 4.000 188.720 ;
+    END
+  END sel[7]
+  PIN sel[8]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 13.440 296.000 14.000 299.000 ;
+    END
+  END sel[8]
+  PIN sel[9]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 296.000 141.120 299.000 141.680 ;
+    END
+  END sel[9]
+  PIN vdd
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal4 ;
+        RECT 22.240 15.380 23.840 282.540 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 175.840 15.380 177.440 282.540 ;
+    END
+  END vdd
+  PIN vss
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal4 ;
+        RECT 99.040 15.380 100.640 282.540 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 252.640 15.380 254.240 282.540 ;
+    END
+  END vss
+  OBS
+      LAYER Metal1 ;
+        RECT 6.720 15.380 292.880 282.540 ;
+      LAYER Metal2 ;
+        RECT 0.140 295.700 13.140 296.000 ;
+        RECT 14.300 295.700 76.980 296.000 ;
+        RECT 78.140 295.700 140.820 296.000 ;
+        RECT 141.980 295.700 204.660 296.000 ;
+        RECT 205.820 295.700 268.500 296.000 ;
+        RECT 269.660 295.700 291.060 296.000 ;
+        RECT 0.140 4.300 291.060 295.700 ;
+        RECT 0.860 4.000 60.180 4.300 ;
+        RECT 61.340 4.000 124.020 4.300 ;
+        RECT 125.180 4.000 187.860 4.300 ;
+        RECT 189.020 4.000 251.700 4.300 ;
+        RECT 252.860 4.000 291.060 4.300 ;
+      LAYER Metal3 ;
+        RECT 0.090 269.660 296.000 282.380 ;
+        RECT 0.090 268.500 295.700 269.660 ;
+        RECT 0.090 252.860 296.000 268.500 ;
+        RECT 0.090 251.700 0.700 252.860 ;
+        RECT 4.300 251.700 296.000 252.860 ;
+        RECT 0.090 205.820 296.000 251.700 ;
+        RECT 0.090 204.660 295.700 205.820 ;
+        RECT 0.090 189.020 296.000 204.660 ;
+        RECT 0.090 187.860 0.700 189.020 ;
+        RECT 4.300 187.860 296.000 189.020 ;
+        RECT 0.090 141.980 296.000 187.860 ;
+        RECT 0.090 140.820 295.700 141.980 ;
+        RECT 0.090 125.180 296.000 140.820 ;
+        RECT 0.090 124.020 0.700 125.180 ;
+        RECT 4.300 124.020 296.000 125.180 ;
+        RECT 0.090 78.140 296.000 124.020 ;
+        RECT 0.090 76.980 295.700 78.140 ;
+        RECT 0.090 61.340 296.000 76.980 ;
+        RECT 0.090 60.180 0.700 61.340 ;
+        RECT 4.300 60.180 296.000 61.340 ;
+        RECT 0.090 14.300 296.000 60.180 ;
+        RECT 0.090 13.140 295.700 14.300 ;
+        RECT 0.090 9.100 296.000 13.140 ;
+      LAYER Metal4 ;
+        RECT 192.220 70.090 192.500 74.390 ;
+  END
+END posoco2000
+END LIBRARY
+
